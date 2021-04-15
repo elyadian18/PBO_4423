@@ -1,52 +1,50 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pratikum6;
 
-/**
- *
- * @author Administrator
- */
 public class stack {
-  hijab top;
-    public stack(){
-        top=null;
+    hijab top = null;
+
+    public stack() {
     }
-    public void push(hijab a){
-        if(top==null) top=a;
-        else{
-            a.next=top;
-            top=a;
+
+    public void push(hijab a) {
+        if (this.top == null) {
+            this.top = a;
+        } else {
+            a.next = this.top;
+            this.top = a;
         }
+
     }
-    public void pop(){
-        if(top==null) System.out.println("kosong");
-        else{
+
+    public void pop() {
+        if (this.top == null) {
+            System.out.println("kosong");
+        } else {
             System.out.println("Hapus Stock Baru. . .");
-            top.view();
-            top=top.next;
+            this.top.view();
+            this.top = this.top.next;
         }
+
     }
+
     public void isEmpty() {
-        if (top == null) System.out.println("Stock kosong");
-        else {
+        if (this.top == null) {
+            System.out.println("Stock kosong");
+        } else {
             System.out.println("Stock Ready");
         }
+
     }
 
-    public void view(){
-        if(top==null) System.out.println("kosong");
-        else{
-            hijab ptr=top;
-            while(ptr!=null){
+    public void view() {
+        if (this.top == null) {
+            System.out.println("kosong");
+        } else {
+            for(hijab ptr = this.top; ptr != null; ptr = ptr.next) {
                 System.out.println("- - - - -");
                 ptr.view();
-                ptr=ptr.next;
             }
         }
-    }
 
- 
+    }
 }
