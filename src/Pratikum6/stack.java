@@ -1,5 +1,6 @@
 package pratikum6;
 
+
 public class stack {
     hijab top = null;
 
@@ -46,5 +47,7 @@ public class stack {
             }
         }
 
+
     }
+
 }
